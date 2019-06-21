@@ -1,0 +1,4 @@
+resources:
+  - ../../base
+  - ../overlay1
+  - ../overlay2
