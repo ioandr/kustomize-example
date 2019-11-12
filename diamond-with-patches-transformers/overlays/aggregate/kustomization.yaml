@@ -1,0 +1,6 @@
+resources:
+  - ../../base
+
+transformers:
+  - ../../components/replicas
+  - ../../components/label

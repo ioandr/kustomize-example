@@ -1,0 +1,16 @@
+apiVersion: builtin
+kind: PatchTransformer
+metadata:
+  name: set-replicas
+target:
+  group: extensions
+  version: v1beta1
+  kind: Deployment
+  name: my-deployment
+patch: |-
+  apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    name: my-deployment
+  spec:
+    replicas: 2

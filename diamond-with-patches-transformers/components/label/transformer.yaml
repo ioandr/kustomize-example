@@ -1,0 +1,19 @@
+apiVersion: builtin
+kind: PatchTransformer
+metadata:
+  name: set-labels
+target:
+  group: extensions
+  version: v1beta1
+  kind: Deployment
+  name: my-deployment
+patch: |-
+  apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    name: my-deployment
+  spec:
+    template:
+      metadata:
+        labels:
+          app: my-app
