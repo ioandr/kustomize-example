@@ -1,0 +1,6 @@
+# prod-canary environment is the same as prod, but configured for the canary deployment
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../prod
+  - ../../patches/canary

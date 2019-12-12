@@ -1,0 +1,7 @@
+resources:
+  - deployment.yaml
+
+configMapGenerator:
+  - name: app
+    literals:
+      - downstreamServiceUrl=http://www.google.com

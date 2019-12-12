@@ -1,0 +1,10 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: stub
+spec:
+  template:
+    spec:
+      containers:
+      - name: stub
+        image: nginx:latest

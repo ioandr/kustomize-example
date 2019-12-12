@@ -1,0 +1,11 @@
+kind: KustomizationPatch
+
+patchesStrategicMerge:
+  - patches/patch.yaml
+
+configMapGenerator:
+  - name: app-config
+    behavior: merge
+    literals:
+      - testValue2=from-patch2
+      - patchValue=from-patch2

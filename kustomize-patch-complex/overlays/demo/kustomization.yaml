@@ -1,0 +1,9 @@
+# demo environment needs a stub server and ingresses for app and stub
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+  - ../../patches/ingress-vars
+  - ../../patches/stub-ingress
+  - ../../patches/app-ingress
+namespace: demo
