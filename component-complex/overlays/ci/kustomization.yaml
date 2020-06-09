@@ -1,0 +1,8 @@
+# ci environment needs a stub server but no ingresses (only accessible internally)
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+components:
+  - ../../patches/stub
+namespace: ci

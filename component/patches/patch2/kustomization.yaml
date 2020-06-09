@@ -1,0 +1,12 @@
+kind: Component
+apiVersion: kustomize.config.k8s.io/v1alpha1
+
+patchesStrategicMerge:
+  - patches/patch.yaml
+
+configMapGenerator:
+  - name: app-config
+    behavior: merge
+    literals:
+      - testValue2=from-patch2
+      - patchValue=from-patch2

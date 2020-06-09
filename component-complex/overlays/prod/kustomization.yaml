@@ -1,0 +1,10 @@
+# prod environment needs an app ingress and no stub
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+
+components:
+  - ../../patches/ingress-vars
+  - ../../patches/app-ingress
+namespace: prod

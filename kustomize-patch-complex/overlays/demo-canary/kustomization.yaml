@@ -1,6 +1,0 @@
-# demo-canary environment is the same as demo, but configured for the canary deployment
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-  - ../demo
-  - ../../patches/canary
