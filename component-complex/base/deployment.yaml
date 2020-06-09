@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+  labels:
+    role: app
+    # Track distinguishes between normal 'stable' deployment and 'canary' deployment.
+    # https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#canary-deployments
+    track: stable
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: app
+      track: stable
+  template:
+    metadata:
+      labels:
+        role: app
+        track: stable
+    spec:
+      containers:
+        - name: app
+          image: nginx:latest
+          envFrom:
+            - configMapRef:
+                name: app

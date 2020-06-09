@@ -1,0 +1,9 @@
+resources:
+  - deployment.yaml
+
+configMapGenerator:
+  - name: app-config
+    literals:
+      - testValue1=from-base
+      - testValue2=from-base
+      - otherValue=from-base

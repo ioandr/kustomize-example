@@ -1,0 +1,4 @@
+# Additional locations where variables can be interpolated
+varReference:
+  - path: spec/rules/host
+    kind: Ingress
